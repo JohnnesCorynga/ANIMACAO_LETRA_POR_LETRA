@@ -1,0 +1,33 @@
+/* ESTILOS GLOBAIS */
+body {
+    background: #333;
+    padding-top: 5em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* ESTILOS ESPECÍFICOS DE DEMONSTRAÇÃO */
+  .typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /*Garante que o conteúdo não seja revelado até a animação */
+    border-right: .15em solid orange; /* O cursor da máquina de escrever */
+    white-space: nowrap; /* Mantém o conteúdo em uma única linha*/
+    margin: 0 auto; /* Dá esse efeito de rolagem à medida que a digitação acontece*/
+    letter-spacing: .15em; /* Ajuste conforme necessário */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+
+  /* O efeito de digitação */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  /* O efeito do cursor da máquina de escrever */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
